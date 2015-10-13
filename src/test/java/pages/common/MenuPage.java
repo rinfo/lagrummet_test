@@ -6,6 +6,9 @@ import setup.SeleniumDriver;
 
 public class MenuPage {
 
+    @FindBy(linkText = "lagrummet.se")
+    WebElement lagrummetLinkButton;
+
     @FindBy(linkText = "Lagar och förordningar")
     WebElement lawsAndRegulationsLink;
 
@@ -35,6 +38,10 @@ public class MenuPage {
 
     @FindBy(linkText = "Vanliga frågor")
     WebElement faqLink;
+
+    public void clickOnLagrummetLinkButton() {
+        lagrummetLinkButton.click();
+    }
 
     public boolean lawsAndRegulationsLinkPresent() {
         return SeleniumDriver.isDisplayed(lawsAndRegulationsLink);
