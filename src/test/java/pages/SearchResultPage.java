@@ -164,4 +164,8 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
         SeleniumDriver.clickOn(lawsAndRegulationsCategoryLink);
         return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
     }
+
+    public String getSearchResultLabel() {
+        return getDriver().findElement(By.xpath("//header/h1")).getText();
+    }
 }
