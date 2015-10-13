@@ -9,7 +9,7 @@ public class SiteMapPage extends BasePage<SiteMapPage> {
 
     @Override
     public boolean isAt() {
-        return  SeleniumDriver.isDisplayed(getDriver().findElement(By.xpath("//div[@id='content']/article/header/h1[contains(text(), 'Webbkarta över lagrummet.se')]")));
+        return SeleniumDriver.isDisplayed(getDriver().findElement(By.xpath("//div[@id='content']/article/header/h1[contains(text(), 'Webbkarta över lagrummet.se')]")));
     }
 
     @Override

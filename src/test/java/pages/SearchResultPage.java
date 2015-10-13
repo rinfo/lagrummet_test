@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import pages.common.MenuPage;
 import setup.SeleniumDriver;
 
 import java.util.ArrayList;
@@ -15,6 +17,15 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
     @FindBy(linkText = "Sökhjälp")
     WebElement searchHelpLink;
 
+    @FindBy(linkText = "Information från lagrummet.se")
+    WebElement informationCategoryLink;
+
+    @FindBy(linkText = "Rättsfall")
+    WebElement courtCaseCategoryLink;
+
+    @FindBy(linkText = "Lagar och förordningar")
+    WebElement lawsAndRegulationsCategoryLink;
+
     @Override
     public boolean isAt() {
         return false;
@@ -22,24 +33,13 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
 
     @Override
     public String getUrl() {
-        return null;
+        return "";
     }
 
     public void searchFor(String query) {
         getDriver().get(BASE_URL + "/search?cat=Alla&query=" + query);
     }
 
-    //termar som matchar
-    public List<String> getMatchTerms() {
-        List<String> terms = new ArrayList();
-        List<WebElement> matchTerms = getDriver().findElements(By.cssSelector(".match"));
-        for (WebElement matchTerm : matchTerms) {
-            terms.add(matchTerm.getText());
-        }
-        return terms;
-    }
-
-    //totalt antal träffar
     public int getTotalHits() {
         String total = getDriver().findElement(By.cssSelector(".showAllLabel")).getText();
         return Integer.parseInt(total.replaceAll("[\\D]", ""));
@@ -148,5 +148,20 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
     public SearchHelpPage clickOnSearchHelpLink() {
         SeleniumDriver.clickOn(searchHelpLink);
         return new SearchHelpPage();
+    }
+
+    public CategorizedSearchHelpPage clickOnInformationCategoryLink() {
+        SeleniumDriver.clickOn(informationCategoryLink);
+        return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
+    }
+
+    public CategorizedSearchHelpPage clickOnCourtCaseCategoryLink() {
+        SeleniumDriver.clickOn(courtCaseCategoryLink);
+        return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
+    }
+
+    public CategorizedSearchHelpPage clickOnLawsAndRegulationsCategoryLink() {
+        SeleniumDriver.clickOn(lawsAndRegulationsCategoryLink);
+        return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
     }
 }
