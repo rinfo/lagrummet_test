@@ -6,7 +6,7 @@ import static setup.SeleniumDriver.getDriver;
 
 public abstract class BasePage<T> {
 
-    protected final String BASE_URL = "http://stage.lagrummet.se";
+    protected final String BASE_URL = "http://localhost:8080/lagrummet.se";
 
     public T openPage(Class<T> clazz) {
         T page = PageFactory.initElements(getDriver(), clazz);
