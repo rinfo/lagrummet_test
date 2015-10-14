@@ -28,6 +28,11 @@ public class StartPage extends BasePage<StartPage> {
         return "";
     }
 
+    public SFSPage getSFSPage(String url) {
+        getDriver().get(BASE_URL + "/rinfo/publ/sfs/" + url);
+        return new SFSPage();
+    }
+
     public HeaderPage getHeaderPage() {
         return headerPage;
     }
