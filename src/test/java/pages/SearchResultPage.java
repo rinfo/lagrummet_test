@@ -164,6 +164,17 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
         return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
     }
 
+    public CategorizedSearchHelpPage clickOnShowMoreHitsCourtCaseCategoryLink() {
+        SeleniumDriver.clickOn(getDriver().findElement(By.xpath("//ul[@id='RattsfallList']/li/a[contains(text(), 'Visa fler träffar')]")));
+
+        return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
+    }
+
+    public CategorizedSearchHelpPage clickOnShowMoreHitsLawsAndRegulationsCategoryLink() {
+        SeleniumDriver.clickOn(getDriver().findElement(By.xpath("//ul[@id='LagarList']/li/a[contains(text(), 'Visa fler träffar')]")));
+        return PageFactory.initElements(getDriver(), CategorizedSearchHelpPage.class);
+    }
+
     public String getSearchResultLabel() {
         return getDriver().findElement(By.xpath("//header/h1")).getText();
     }
