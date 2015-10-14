@@ -17,10 +17,10 @@ public class ShowMoreHitsTest {
         searchResultPage = new SearchResultPage().openPage(SearchResultPage.class);
     }
 
-        @Test
+    @Test
     public void showMoreHitsLawsAndRegulationsCategory() {
         searchResultPage.searchFor("flyghöna");
-        CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnShowMoreHitsCourtCaseCategoryLink();
+        CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
         assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
