@@ -25,4 +25,8 @@ public class SFSPage extends BasePage<SFSPage> {
         return getDriver().findElements(By.xpath(String.format("//*[@id='register_konsolideringsunderlag']/ul"))).isEmpty();
     }
 
+    public boolean preambleDisplayValueNone() {
+        return getDriver().findElement(By.xpath("//*[@class='preambel']")).getCssValue("display").equalsIgnoreCase("none");
+    }
+
 }
