@@ -21,4 +21,8 @@ public class SFSPage extends BasePage<SFSPage> {
        return SeleniumDriver.isDisplayed(getDriver().findElement(By.xpath(String.format("//article[@id='rinfo']/h1[contains(text(), '%s')]", heading))));
     }
 
+    public boolean consolidationsEmpty() {
+        return getDriver().findElements(By.xpath(String.format("//*[@id='register_konsolideringsunderlag']/ul"))).isEmpty();
+    }
+
 }
