@@ -38,8 +38,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("NJA 2005 s. 11");
 
         //then
-        assertEquals(134, searchResultPage.getTotalHits());
-        assertEquals(134, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(472, searchResultPage.getTotalHits());
+        assertEquals(472, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals("NJA 2005 s. 11", searchResultPage.getCourtCaseHits().get(0));
     }
 
@@ -60,12 +60,12 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2010 ref. 9");
 
         //then
-        assertEquals(107, searchResultPage.getTotalHits());
-        assertEquals(106, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(110, searchResultPage.getTotalHits());
+        assertEquals(109, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals(1, searchResultPage.getNumberOfInformationHits());
 
         assertEquals("Vanliga frågor", searchResultPage.getInformationHits().get(0));
-        assertEquals("RÅ 2010 ref. 9", searchResultPage.getCourtCaseHits().get(2));
+        assertEquals("RÅ 2010 ref. 9", searchResultPage.getCourtCaseHits().get(0));
     }
 
     @Test
@@ -74,8 +74,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2010 ref. 22");
 
         //then
-        assertEquals(83, searchResultPage.getTotalHits());
-        assertEquals(83, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(85, searchResultPage.getTotalHits());
+        assertEquals(85, searchResultPage.getNumberOfCourtCasesHits());
 
         assertEquals("RÅ 2010 ref. 22", searchResultPage.getCourtCaseHits().get(0));
     }
@@ -100,12 +100,12 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2006 ref. 1");
 
         //then
-        assertEquals(229, searchResultPage.getTotalHits());
-        assertEquals(225, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(230, searchResultPage.getTotalHits());
+        assertEquals(226, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals(2, searchResultPage.getNumberOfLawsAndRegulationsHits());
         assertEquals(2, searchResultPage.getNumberOfInformationHits());
 
-        assertEquals("RÅ 2006 ref. 1", searchResultPage.getCourtCaseHits().get(1));
+        assertEquals("RÅ 2006 ref. 1", searchResultPage.getCourtCaseHits().get(0));
         assertEquals("Förordning (2009:231) om ändring i förordningen (2001:1085) om motorfordons avgasrening", searchResultPage.getLawsAndRegulationsHits().get(0));
         assertEquals("Vanliga frågor", searchResultPage.getInformationHits().get(0));
     }
@@ -145,8 +145,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("AD 2010 nr 73");
 
         //then
-        assertEquals(18, searchResultPage.getTotalHits());
-        assertEquals(18, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(19, searchResultPage.getTotalHits());
+        assertEquals(19, searchResultPage.getNumberOfCourtCasesHits());
 
         assertEquals("AD 2010 nr 73", searchResultPage.getCourtCaseHits().get(0));
     }

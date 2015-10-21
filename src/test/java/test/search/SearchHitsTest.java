@@ -170,10 +170,10 @@ public class SearchHitsTest {
     public void searchForInternationelltMaterial() {
         searchResultPage.searchFor("internationellt material");
 
-        assertEquals(198, searchResultPage.getTotalHits());
+        assertEquals(206, searchResultPage.getTotalHits());
         assertEquals(4, searchResultPage.getNumberOfInformationHits());
-        assertEquals(62, searchResultPage.getNumberOfCourtCasesHits());
-        assertEquals(132, searchResultPage.getNumberOfLawsAndRegulationsHits());
+        assertEquals(65, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(137, searchResultPage.getNumberOfLawsAndRegulationsHits());
 
         assertEquals(2, searchResultPage.searchHitsByCategoryAndTitle("LagrummetList", "Internationellt material"));
         assertEquals("Internationellt", searchResultPage.getMatchTermsBySearchHit("LagrummetList", "Internationellt material").get(0));
@@ -206,8 +206,8 @@ public class SearchHitsTest {
     public void searchForDjurskydd() {
         searchResultPage.searchFor("djurskydd");
 
-        assertEquals(399, searchResultPage.getTotalHits());
-        assertEquals(51, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(401, searchResultPage.getTotalHits());
+        assertEquals(53, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals(348, searchResultPage.getNumberOfLawsAndRegulationsHits());
 
         assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("RattsfallList", "RÅ 2009 ref. 75"));
@@ -217,11 +217,11 @@ public class SearchHitsTest {
         assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("RattsfallList", "RÅ 2003 ref. 8"));
         assertEquals("djurskydd", searchResultPage.getMatchTermsBySearchHit("RattsfallList", "RÅ 2003 ref. 8").get(0));
 
+        assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("RattsfallList", "NJA 2015 s. 393"));
+        assertEquals("djurskydd", searchResultPage.getMatchTermsBySearchHit("RattsfallList", "NJA 2015 s. 393").get(0));
+
         assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("RattsfallList", "RH 2014:14"));
         assertEquals("djurskyddslagen", searchResultPage.getMatchTermsBySearchHit("RattsfallList", "RH 2014:14").get(0));
-
-        assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("RattsfallList", "MÖD 2007:27"));
-        assertEquals("djurskydd", searchResultPage.getMatchTermsBySearchHit("RattsfallList", "MÖD 2007:27").get(0));
 
         assertEquals(1, searchResultPage.searchHitsByCategoryAndTitle("LagarList", "Lag (1944:219)\nom "));
         assertEquals("djurskydd", searchResultPage.getMatchTermsInTitleBySearchHit("LagarList", "Lag (1944:219)\nom ").get(0));
