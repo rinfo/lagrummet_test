@@ -18,8 +18,6 @@ public class StartPageTest {
 
     @Test
     public void startPage() {
-        startPage.getMenuPage().clickOnLagrummetLinkButton();
-
         assertEquals(true, startPage.isAt());
     }
 
