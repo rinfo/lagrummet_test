@@ -13,9 +13,6 @@ import static setup.SeleniumDriver.getDriver;
 
 public class SearchResultPage extends BasePage <SearchResultPage>{
 
-    @FindBy(linkText = "Sökhjälp")
-    WebElement searchHelpLink;
-
     @FindBy(linkText = "Information från lagrummet.se")
     WebElement informationCategoryLink;
 
@@ -142,11 +139,6 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
 
     public static String getNumberInsideParenthesis(String string) {
         return string.substring(string.indexOf("(") + 1, string.indexOf(")"));
-    }
-
-    public SearchHelpPage clickOnSearchHelpLink() {
-        SeleniumDriver.clickOn(searchHelpLink);
-        return new SearchHelpPage();
     }
 
     public CategorizedSearchHelpPage clickOnInformationCategoryLink() {

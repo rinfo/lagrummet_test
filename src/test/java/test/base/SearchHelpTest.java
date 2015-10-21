@@ -3,6 +3,7 @@ package test.base;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.openqa.selenium.support.PageFactory;
+import pages.CategorizedSearchHelpPage;
 import pages.SearchHelpPage;
 import pages.SearchResultPage;
 import test.category.BaseCategory;
@@ -21,9 +22,10 @@ public class SearchHelpTest {
 
     @Test
     public void searchHelpLinkPresent() {
-        searchResultPage.searchFor("somethingreallybad");
+        searchResultPage.searchFor("flyghöna");
+        CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
-        SearchHelpPage searchHelpPage = searchResultPage.clickOnSearchHelpLink();
+        SearchHelpPage searchHelpPage = categorizedSearchHelpPage.clickOnSearchHelpLink();
         assertEquals(true, searchHelpPage.isAt());
     }
 }

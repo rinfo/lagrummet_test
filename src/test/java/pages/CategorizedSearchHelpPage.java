@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import setup.SeleniumDriver;
 
 import static setup.SeleniumDriver.getDriver;
 
@@ -31,6 +32,11 @@ public class CategorizedSearchHelpPage extends BasePage<CategorizedSearchHelpPag
 
     public boolean searchHelpLinkPresent() {
         return searchHelpLink.isDisplayed();
+    }
+
+    public SearchHelpPage clickOnSearchHelpLink() {
+        SeleniumDriver.clickOn(searchHelpLink);
+        return new SearchHelpPage();
     }
 
     public boolean titlePresent(String title) {
