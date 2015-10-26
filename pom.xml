@@ -47,6 +47,18 @@
                 <runSuite>**/SearchTestSuite.class</runSuite>
             </properties>
         </profile>
+        <profile>
+            <id>page-tests</id>
+            <properties>
+                <runSuite>**/PageTestSuite.class</runSuite>
+            </properties>
+        </profile>
+        <profile>
+            <id>all</id>
+            <properties>
+                <runSuite>**/AllTests.class</runSuite>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
