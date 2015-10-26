@@ -21,20 +21,23 @@ public class SeleniumDriver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            driver = new FirefoxDriver();
-//            try {
-//                DesiredCapabilities caps = new DesiredCapabilities();
-//                caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-//                caps.setCapability("browser", "Firefox");
-//                caps.setCapability("browser_version", "40.0");
-//                caps.setCapability("os", "OS X");
-//                caps.setCapability("os_version", "Yosemite");
-//                caps.setCapability("resolution", "1920x1080");
-//                caps.setCapability("browserstack.debug", "true");
-//                driver = new RemoteWebDriver(new URL(REMOTE_URL), caps);
-//            } catch (MalformedURLException e) {
-//                e.printStackTrace();
-//            }
+            if (USERNAME != null && AUTOMATE_KEY != null) {
+                try {
+                    DesiredCapabilities caps = new DesiredCapabilities();
+                    caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                    caps.setCapability("browser", "Firefox");
+                    caps.setCapability("browser_version", "40.0");
+                    caps.setCapability("os", "OS X");
+                    caps.setCapability("os_version", "Yosemite");
+                    caps.setCapability("resolution", "1920x1080");
+                    caps.setCapability("browserstack.debug", "true");
+                    driver = new RemoteWebDriver(new URL(REMOTE_URL), caps);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                new FirefoxDriver();
+            }
         }
         return driver;
     }
