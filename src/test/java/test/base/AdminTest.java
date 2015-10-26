@@ -5,11 +5,12 @@ import org.junit.experimental.categories.Category;
 import org.openqa.selenium.support.PageFactory;
 import pages.AdminPage;
 import test.category.BaseCategory;
+import test.category.PageCategory;
 
 import static org.junit.Assert.assertEquals;
 import static setup.SeleniumDriver.getDriver;
 
-@Category(BaseCategory.class)
+@Category({BaseCategory.class, PageCategory.class})
 public class AdminTest {
 
     private AdminPage adminPage;

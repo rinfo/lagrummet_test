@@ -4,11 +4,13 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import pages.CategorizedSearchHelpPage;
 import pages.SearchResultPage;
+import test.category.BaseCategory;
+import test.category.PageCategory;
 import test.category.SearchCategory;
 
 import static org.junit.Assert.assertEquals;
 
-@Category(SearchCategory.class)
+@Category({BaseCategory.class, PageCategory.class})
 public class ShowMoreHitsTest {
 
     private SearchResultPage searchResultPage;
