@@ -23,7 +23,7 @@ public class CategorySearchTest {
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnInformationCategoryLink();
 
         assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
-        assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("På lagrummet.se"));
 
         assertEquals(true, categorizedSearchHelpPage.titlePresent("Myndigheters och kommuners ansvar"));
@@ -39,7 +39,7 @@ public class CategorySearchTest {
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
         assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
-        assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Lagar och förordningar (SFS)"));
 
         assertEquals(true, categorizedSearchHelpPage.titlePresent("Artskyddsförordning (1998:179)"));
@@ -52,7 +52,7 @@ public class CategorySearchTest {
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnCourtCaseCategoryLink();
 
         assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
-        assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Vägledande domar"));
 
         assertEquals(true, categorizedSearchHelpPage.titlePresent("MÖD 2007:27"));
