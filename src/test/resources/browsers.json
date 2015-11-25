@@ -40,12 +40,5 @@
     "browser_version": "45.0",
     "os": "os x",
     "os_version": "Yosemite"
-  },
-  {
-    "id": 7,
-    "browser": "firefox",
-    "browser_version": "35.0",
-    "os": "os x",
-    "os_version": "Yosemite"
   }
 ]
