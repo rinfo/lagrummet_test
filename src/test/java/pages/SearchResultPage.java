@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +34,8 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
     }
 
     public void searchFor(String query) {
-        getDriver().get(BASE_URL + "/search?cat=Alla&query=" + query);
+        WebDriver driver = getDriver();
+        driver.get(new StringBuilder().append(BASE_URL).append("/search?cat=Alla&query=").append(query).toString());
     }
 
     public int getTotalHits() {
