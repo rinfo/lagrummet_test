@@ -24,7 +24,7 @@ public class ShowMoreHitsTest {
         searchResultPage.searchFor("flyghöna");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
-        assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Lagar och förordningar (SFS)"));
 
@@ -37,7 +37,7 @@ public class ShowMoreHitsTest {
         searchResultPage.searchFor("djurpark");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnShowMoreHitsCourtCaseCategoryLink();
 
-        assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Vägledande domar"));
 

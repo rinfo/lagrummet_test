@@ -22,7 +22,7 @@ public class CategorySearchTest {
         searchResultPage.searchFor("hjälp");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnInformationCategoryLink();
 
-        assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("På lagrummet.se"));
 
@@ -38,7 +38,7 @@ public class CategorySearchTest {
         searchResultPage.searchFor("flyghöna");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
-        assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Lagar och förordningar (SFS)"));
 
@@ -51,7 +51,7 @@ public class CategorySearchTest {
         searchResultPage.searchFor("djurpark");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnCourtCaseCategoryLink();
 
-        assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
+        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
         //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Vägledande domar"));
 
