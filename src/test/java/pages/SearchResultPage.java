@@ -1,5 +1,7 @@
 package pages;
 
+import java.net.URLEncoder;
+import java.io.UnsupportedEncodingException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,7 +37,13 @@ public class SearchResultPage extends BasePage <SearchResultPage>{
 
     public void searchFor(String query) {
         WebDriver driver = getDriver();
-        driver.get(new StringBuilder().append(BASE_URL).append("/search?cat=Alla&query=").append(query).toString());
+        String encoded_url = null;
+        try {
+            encoded_url = URLEncoder.encode(query,"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        driver.get(new StringBuilder().append(BASE_URL).append("/search?cat=Alla&query=").append(encoded_url).toString());
     }
 
     public int getTotalHits() {
