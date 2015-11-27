@@ -24,8 +24,6 @@ public class ShowMoreHitsTest {
         searchResultPage.searchFor("flyghöna");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnLawsAndRegulationsCategoryLink();
 
-        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
-        //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Lagar och förordningar (SFS)"));
 
         assertEquals(true, categorizedSearchHelpPage.titlePresent("Artskyddsförordning (1998:179)"));
@@ -37,8 +35,6 @@ public class ShowMoreHitsTest {
         searchResultPage.searchFor("djurpark");
         CategorizedSearchHelpPage categorizedSearchHelpPage = searchResultPage.clickOnShowMoreHitsCourtCaseCategoryLink();
 
-        //assertEquals(true, categorizedSearchHelpPage.printLinkPresent());
-        //assertEquals(true, categorizedSearchHelpPage.searchHelpLinkPresent());
         assertEquals(true, categorizedSearchHelpPage.hitResultLabelPresent("Vägledande domar"));
 
         assertEquals(true, categorizedSearchHelpPage.titlePresent("MÖD 2007:27"));
