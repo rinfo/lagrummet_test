@@ -9,6 +9,7 @@ import test.category.BaseCategory;
 import test.category.SearchCategory;
 import test.search.ExactHitsTest;
 import test.search.SearchHitsTest;
+import org.openqa.selenium.WebDriver;
 
 import static setup.SeleniumDriver.getDriver;
 
@@ -23,6 +24,6 @@ public class SearchTestSuite {
 
     @AfterClass
     public static void tearDown() {
-        getDriver().quit();
+        //getDriver().quit();
     }
 }
