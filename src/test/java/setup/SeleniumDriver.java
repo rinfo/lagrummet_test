@@ -42,7 +42,7 @@ public class SeleniumDriver {
                 new FirefoxDriver();
             }
         }
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         return driver;
     }
 
