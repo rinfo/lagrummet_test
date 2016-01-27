@@ -38,8 +38,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("NJA 2005 s. 11");
 
         //then
-        assertEquals(472, searchResultPage.getTotalHits());
-        assertEquals(472, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(135, searchResultPage.getTotalHits());
+        assertEquals(135, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals("NJA 2005 s. 11", searchResultPage.getCourtCaseHits().get(0));
     }
 
@@ -49,8 +49,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("HFD 2011 ref. 67");
 
         //then
-        assertEquals(2, searchResultPage.getTotalHits());
-        assertEquals(2, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(3, searchResultPage.getTotalHits());
+        assertEquals(3, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals("HFD 2011 ref. 67", searchResultPage.getCourtCaseHits().get(0));
     }
 
@@ -60,8 +60,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2010 ref. 9");
 
         //then
-        assertEquals(110, searchResultPage.getTotalHits());
-        assertEquals(109, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(111, searchResultPage.getTotalHits());
+        assertEquals(110, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals(1, searchResultPage.getNumberOfInformationHits());
 
         assertEquals("Vanliga frågor", searchResultPage.getInformationHits().get(0));
@@ -74,8 +74,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2010 ref. 22");
 
         //then
-        assertEquals(85, searchResultPage.getTotalHits());
-        assertEquals(85, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(87, searchResultPage.getTotalHits());
+        assertEquals(87, searchResultPage.getNumberOfCourtCasesHits());
 
         assertEquals("RÅ 2010 ref. 22", searchResultPage.getCourtCaseHits().get(0));
     }
@@ -100,8 +100,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("RÅ 2006 ref. 1");
 
         //then
-        assertEquals(230, searchResultPage.getTotalHits());
-        assertEquals(226, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(232, searchResultPage.getTotalHits());
+        assertEquals(228, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals(2, searchResultPage.getNumberOfLawsAndRegulationsHits());
         assertEquals(2, searchResultPage.getNumberOfInformationHits());
 
@@ -145,8 +145,8 @@ public class ExactHitsTest {
         searchResultPage.searchFor("AD 2010 nr 73");
 
         //then
-        assertEquals(19, searchResultPage.getTotalHits());
-        assertEquals(19, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(20, searchResultPage.getTotalHits());
+        assertEquals(20, searchResultPage.getNumberOfCourtCasesHits());
 
         assertEquals("AD 2010 nr 73", searchResultPage.getCourtCaseHits().get(0));
     }

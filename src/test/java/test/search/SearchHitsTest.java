@@ -170,10 +170,10 @@ public class SearchHitsTest {
     public void searchForInternationelltMaterial() {
         searchResultPage.searchFor("internationellt material");
 
-        assertEquals(206, searchResultPage.getTotalHits());
+        assertEquals(203, searchResultPage.getTotalHits());
         assertEquals(4, searchResultPage.getNumberOfInformationHits());
-        assertEquals(65, searchResultPage.getNumberOfCourtCasesHits());
-        assertEquals(137, searchResultPage.getNumberOfLawsAndRegulationsHits());
+        assertEquals(67, searchResultPage.getNumberOfCourtCasesHits());
+        assertEquals(132, searchResultPage.getNumberOfLawsAndRegulationsHits());
 
         assertEquals(2, searchResultPage.searchHitsByCategoryAndTitle("LagrummetList", "Internationellt material"));
         assertEquals("Internationellt", searchResultPage.getMatchTermsBySearchHit("LagrummetList", "Internationellt material").get(0));
