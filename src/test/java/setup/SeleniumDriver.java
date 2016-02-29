@@ -39,7 +39,7 @@ public class SeleniumDriver {
                     e.printStackTrace();
                 }
             } else {
-                new FirefoxDriver();
+                driver = new FirefoxDriver();
             }
         }
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
