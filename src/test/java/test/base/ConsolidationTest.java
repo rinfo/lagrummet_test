@@ -35,4 +35,13 @@ public class ConsolidationTest {
         assertEquals(true, sfsPage.preambleDisplayValueNone());
     }
 
+    @Test
+    public void linkToConsolidatedDocumentDisplayed() {
+        SFSPage sfsPage = startPage.getSFSPage("1999:175/konsolidering/2011-05-02");
+
+        assertEquals(true, sfsPage.isAt());
+        assertEquals(true, sfsPage.consolidationsEmpty());
+        assertEquals(true, sfsPage.linkToConsolidatedDocumentExists());
+
+    }
 }
