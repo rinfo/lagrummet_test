@@ -22,6 +22,6 @@ public class BaseTestSuite {
 
     @AfterClass
     public static void tearDown() {
-        getDriver().quit();
+        //getDriver().quit();
     }
 }
