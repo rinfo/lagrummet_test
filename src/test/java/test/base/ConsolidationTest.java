@@ -36,7 +36,7 @@ public class ConsolidationTest {
     }
 
     @Test
-    public void linkToConsolidatedDocumentDisplayed() {
+    public void linkToConsolidatedDocumentDisplayed_sfs_1999_175() {
         SFSPage sfsPage = startPage.getSFSPage("1999:175/konsolidering/2011-05-02");
 
         assertEquals(true, sfsPage.isAt());
@@ -44,4 +44,21 @@ public class ConsolidationTest {
         assertEquals(true, sfsPage.linkToConsolidatedDocumentExists());
 
     }
+
+    @Test
+    public void ConsolidatedDocumentDisplayed_sfs_1998_150() {
+        SFSPage sfsPage = startPage.getSFSPage("1998:150");
+        assertEquals(true, sfsPage.isAt());
+    }
+
+    @Test
+    public void linkToConsolidatedDocumentDisplayed_sfs_1998_150() {
+        SFSPage sfsPage = startPage.getSFSPage("1998:150/konsolidering/2010-09-01");
+
+        assertEquals(true, sfsPage.isAt());
+        assertEquals(true, sfsPage.consolidationsEmpty());
+        assertEquals(true, sfsPage.linkToConsolidatedDocumentExists());
+
+    }
+    
 }
