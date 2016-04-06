@@ -20,6 +20,6 @@ public class PageTestSuite {
 
     @AfterClass
     public static void tearDown() {
-        getDriver().quit();
+        //getDriver().quit();
     }
 }

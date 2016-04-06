@@ -49,7 +49,7 @@ public class ExactHitsTest {
         searchResultPage.searchFor("HFD 2011 ref. 67");
 
         //then
-        assertEquals(3, searchResultPage.getTotalHits());
+        assertEquals(4, searchResultPage.getTotalHits());
         assertEquals(3, searchResultPage.getNumberOfCourtCasesHits());
         assertEquals("HFD 2011 ref. 67", searchResultPage.getCourtCaseHits().get(0));
     }
