@@ -45,7 +45,8 @@ public class ConsolidationTest {
 
     }
 
-    @Test
+    // Don't run this test until documents from early 1998 become available from external database again.
+    //@Test
     public void ConsolidatedDocumentDisplayed_sfs_1998_150() {
         SFSPage sfsPage = startPage.getSFSPage("1998:150");
         assertEquals(true, sfsPage.isAt());
