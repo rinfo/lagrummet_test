@@ -53,6 +53,12 @@ public class ConsolidationTest {
     }
 
     @Test
+    public void ConsolidatedDocumentDisplayed_sfs_1999_175() {
+        SFSPage sfsPage = startPage.getSFSPage("1999:175");
+        assertEquals(true, sfsPage.isAt());
+    }
+
+    @Test
     public void linkToConsolidatedDocumentDisplayed_sfs_1998_150() {
         SFSPage sfsPage = startPage.getSFSPage("1998:150/konsolidering/2010-09-01");
 
